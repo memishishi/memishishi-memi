@@ -1,0 +1,46 @@
+html, body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	border: solid 1px brown;
+	background-color: aqua;
+}
+.shark{
+	background-image: url('../img/shark.svg');
+	height: 230px;
+	width: 240px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom left;
+	position: relative;
+	vertical-align: middle;
+	animation: sharkanimation 10s infinite;
+	transition: all 0.2s step-start 0.2s;
+}
+.fish{
+	background-image: url('../img/fish1.svg');
+	height: 100px;
+	width: 200px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom left;
+	position: relative;
+	float: right;
+	animation: fishanimation 10s infinite;
+	transition: all 0.2s step-start 0.2s;
+}
+@keyframes fishanimation {
+  0%   {top: 100px; right: 600px;}
+  25%  {right: 600px;}
+  50%  {top: 100px ; right: 600px; transform:  translate(-50%, -50%) rotate(100deg)}
+  75%  {top: 200px; right: 600px; transform:  translate(-70%, -70%) rotate(100deg)}
+  100% {top: 300px; right: 600px; transform:  translate(-40%, -40%) rotate(100deg)}
+}
+@keyframes sharkanimation {
+  0%   {top:0px; left: 0;}
+  25%  {left: 600px;}
+  50%  {top: 100px ;left: 600px; transform:  translate(-50%, -50%) rotate(100deg)}
+  75%  {top: 210px; left: 600px; transform:  translate(-70%, -70%) rotate(100deg)}
+  100% {top: 330px; left: 600px; transform:  translate(-40%, -40%) rotate(100deg)}
+}
